@@ -1,0 +1,36 @@
+:root{--bg:#04060f;--panel:#0b1226;--line:#1d2a4d;--tx:#eaf2ff;--mut:#9fb0d0;--cy:#4fd8ff;--vi:#8b7bff;--am:#ffb84d;--rd:#ff6b6b;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+*{box-sizing:border-box}html{scroll-padding-top:90px;scroll-behavior:smooth}
+body{margin:0;background:radial-gradient(1200px 600px at 80% -10%,#1a1450 0,transparent 60%),var(--bg);color:var(--tx);font:16px/1.55 Georgia,"Iowan Old Style",serif}
+h1,h2,h3,nav,button,select,label,.k{font-family:"Gill Sans","Trebuchet MS",system-ui,sans-serif}
+canvas#stars{position:fixed;inset:0;z-index:-1;width:100%;height:100%}
+.hero{min-height:88vh;display:grid;align-content:center;padding:6vw;max-width:1100px;margin:auto}
+.hero h1{font-size:clamp(2.2rem,6vw,4.6rem);line-height:1.05;margin:0 0 .5em;font-weight:300;letter-spacing:-.02em}
+.hero p{max-width:60ch;color:var(--mut)}
+.planet{position:absolute;right:-8vw;top:12vh;width:42vw;height:42vw;max-width:520px;max-height:520px;border-radius:50%;background:radial-gradient(circle at 30% 30%,#6c5cff,#1a1f5c 55%,#05060f 75%);box-shadow:0 0 120px #3b2fd066;z-index:-1;opacity:.8}
+.btn,button{background:transparent;color:var(--tx);border:1px solid var(--cy);padding:.6em 1.1em;border-radius:6px;cursor:pointer;font-size:.95rem;min-height:44px}
+.btn:hover,button:hover{background:#4fd8ff22}button[aria-pressed=true],button.on{background:var(--cy);color:#02101a}
+:focus-visible{outline:3px solid var(--am);outline-offset:2px}
+nav{position:sticky;top:0;z-index:5;background:#050917ee;backdrop-filter:blur(8px);border-bottom:1px solid var(--line);display:flex;gap:.3rem;flex-wrap:wrap;padding:.5rem 1rem;align-items:center}
+nav a{color:var(--mut);text-decoration:none;padding:.5em .8em;border-radius:6px}nav a.on{color:var(--tx);background:#4fd8ff22;box-shadow:inset 0 -2px var(--cy)}
+nav select{margin-left:auto;background:var(--panel);color:var(--tx);border:1px solid var(--cy);padding:.5em;border-radius:6px;min-height:44px}
+main{max-width:1100px;margin:auto;padding:0 1rem 4rem}section{padding:3rem 0;border-top:1px solid var(--line)}
+h2{font-weight:300;font-size:2rem;margin:0 0 .3em}.sub{color:var(--mut);max-width:70ch}
+.grid{display:grid;gap:1rem;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));margin:1rem 0}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:1rem}
+.card h3{margin:0 0 .3rem;font-size:1rem;font-weight:600}.big{font-size:1.9rem;font-family:system-ui}.u{color:var(--mut);font-size:.85rem}
+.tag{display:inline-block;font-size:.78rem;border:1px solid var(--vi);color:#cfc8ff;border-radius:4px;padding:.1em .5em;margin:.1em}
+.tag.f{border-color:var(--am);color:var(--am)}.st{font-weight:600}.st.ok{color:var(--cy)}.st.rv{color:var(--am)}.st.ct{color:var(--rd)}.st.na{color:var(--mut)}
+.bar{height:10px;background:#16213f;border-radius:5px;overflow:hidden}.bar i{display:block;height:100%;background:var(--cy);transition:width .5s}
+svg text{fill:var(--mut);font-size:11px}.tabs{display:flex;gap:.5rem;flex-wrap:wrap;margin:1rem 0}
+table{width:100%;border-collapse:collapse}td,th{padding:.5em;border-bottom:1px solid var(--line);text-align:left;font-size:.92rem}
+input[type=search],input[type=range]{width:100%;min-height:44px}input[type=search]{background:var(--panel);color:var(--tx);border:1px solid var(--line);border-radius:6px;padding:.5em}
+.wrap{overflow-x:auto}.note{font-size:.85rem;color:var(--mut);border-left:3px solid var(--vi);padding-left:.7rem;margin:.8rem 0}
+.hero>*{animation:in .9s both}@keyframes in{from{opacity:0;transform:translateY(14px)}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+.pt{vertical-align:middle;margin-right:.5rem;flex:none}button.on .u{color:#02101a}
+.part{fill:#0f1a38;stroke:#5a79c9;stroke-width:2;cursor:pointer;transition:fill .3s,stroke .3s}.part.on,.part:focus-visible{stroke:var(--cy);fill:#13264d}.lc{fill:none!important}
+#suitsvg text{pointer-events:none;text-anchor:middle}.refs li{margin:.4em 0;font-size:.9rem}a{color:var(--cy)}sup a{text-decoration:none}
+@media(max-width:600px){.hero{padding:10vw 5vw}h2{font-size:1.6rem}td,th{font-size:.82rem;padding:.4em .3em}}
+.back{color:var(--cy)!important;border:1px solid var(--cy);font-weight:600}.skip{position:absolute;left:-999px}.skip:focus{left:0;background:var(--cy);color:#000;padding:.6em 1em;z-index:20}
+body{overflow-x:hidden}a,li{overflow-wrap:anywhere}
+html,body{overflow-x:clip}
